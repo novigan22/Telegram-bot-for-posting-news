@@ -27,10 +27,10 @@ This Telegram bot automatically scrapes news articles from a selected website, s
    cd news-parser-bot
 
 2. **Install dependencies:**
-   pip install -r requirements.txt
+    pip install -r requirements.txt
 
 3. **Configure environment:**
-  Create or edit config.py with your credentials:
+   Create or edit config.py with your credentials:
   
    BOT_TOKEN = "your_telegram_bot_token"
   
@@ -41,4 +41,4 @@ This Telegram bot automatically scrapes news articles from a selected website, s
    OPENAI_API_KEY = "your_openai_api_key"
 
 4. **Run the bot:**
-   python main.py
+    python main.py
