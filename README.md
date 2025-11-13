@@ -32,13 +32,13 @@ This Telegram bot automatically scrapes news articles from a selected website, s
 3. **Configure environment:**
   Create or edit config.py with your credentials:
   
-  BOT_TOKEN = "your_telegram_bot_token"
+   BOT_TOKEN = "your_telegram_bot_token"
   
-  CHANNEL_ID = "your_channel_name"
+   CHANNEL_ID = "your_channel_name"
   
-  USER_ID = "admin Telegram user ID"
+   USER_ID = "admin Telegram user ID"
   
-  OPENAI_API_KEY = "your_openai_api_key"
+   OPENAI_API_KEY = "your_openai_api_key"
 
 4. **Run the bot:**
    python main.py
