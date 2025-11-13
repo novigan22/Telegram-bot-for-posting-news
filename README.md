@@ -38,7 +38,7 @@ This Telegram bot automatically scrapes news articles from a selected website, s
   
    USER_ID = "admin Telegram user ID"
   
-   OPENAI_API_KEY = "your_openai_api_key"
+   GENAI_API_KEY = "your_genai_api_key"
 
 4. **Run the bot:**
     python main.py
