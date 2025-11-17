@@ -4,7 +4,7 @@ from aiogram import Bot, Dispatcher
 from aiogram.filters import Command
 from aiogram.types import Message
 
-from os import getenv
+import os
 from dotenv import load_dotenv
 
 import parser as pr
@@ -12,13 +12,14 @@ from request_to_ai import sum_text
 
 load_dotenv()
 
-CHANNEL = getenv('TELEGRAM_CHANNEL')
-bot = Bot(getenv('TOKEN'))
-USER_ID = getenv('USER_ID')
+CHANNEL = os.getenv('TELEGRAM_CHANNEL')
+bot = Bot(os.getenv('TOKEN'))
+USER_ID = os.getenv('USER_ID')
 dp = Dispatcher()
 
 async def main():
-    asyncio.create_task(start())
+    if os.environ.get('IS_WORKER') == '1':
+        asyncio.create_task(start())
     await dp.start_polling(bot)
     
 
