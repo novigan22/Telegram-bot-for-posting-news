@@ -2,7 +2,6 @@ import asyncio
 import logging
 from aiogram import Bot, Dispatcher
 from aiogram.filters import Command
-from aiogram.types import Message
 
 import os
 from dotenv import load_dotenv
@@ -18,11 +17,10 @@ USER_ID = os.getenv('USER_ID')
 dp = Dispatcher()
 
 async def main():
-    if os.environ.get('IS_WORKER') == '1':
-        asyncio.create_task(start())
     await dp.start_polling(bot)
     
 
+@dp.message(Command('start'))
 async def start():
     while True:
         try:
